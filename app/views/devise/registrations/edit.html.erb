@@ -1,0 +1,54 @@
+<% flash.each do |type, msg| %>
+      <div class="alert alert-info" align = "center">
+        <%= msg %>
+      </div>
+    <% end %>
+<h2 align="center">Edit <%= resource_name.to_s.humanize %></h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  
+  <div align="center">
+     <%= f.label :name %><br />
+     <%= f.text_field :name, autofocus: true, class: "round"%>
+  </div>
+
+  <div class="field" align="center">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "round" %>
+  </div>
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div align="center">Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
+  <div class="field" align="center">
+    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+    <%= f.password_field :password, autocomplete: "new-password", class: "round" %>
+    <% if @minimum_password_length %>
+      <br />
+      <em><%= @minimum_password_length %> characters minimum</em>
+    <% end %>
+  </div>
+
+  <div class="field" align="center">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "round" %>
+  </div>
+
+  <div class="field" align="center">
+    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+    <%= f.password_field :current_password, autocomplete: "current-password", class: "round" %>
+  </div>
+
+  <div class="actions" align="center">
+    <button class="new-button"><%= f.submit "Update", class: "round" %></button>
+  </div>
+<% end %>
+<br />
+ <div class="actions" align="center">
+    <h2 align="center" >Unhappy?</h2>
+    <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "round" %>
+
+    <%= link_to "Back", :back %>
+</div>
