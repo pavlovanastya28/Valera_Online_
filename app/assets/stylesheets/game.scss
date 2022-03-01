@@ -1,0 +1,71 @@
+  .link {
+    text-decoration: none;
+    
+  }
+
+    p {
+                text-align: center;
+                font-size: 18pt;
+                text-shadow: #cad5e2 1px 1px 0, #cad5e2 2px 2px 0, 
+                            #cad5e2 3px 3px 0, #cad5e2 4px 4px 0, 
+                            #cad5e2 5px 5px 0;
+            }
+
+            h2 {
+                font-weight: bold;
+                font-size: 26pt;
+                text-align: center;
+                text-shadow: #cad5e2 1px 1px 0, #cad5e2 2px 2px 0, 
+                            #cad5e2 3px 3px 0, #cad5e2 4px 4px 0, 
+                            #cad5e2 5px 5px 0;
+            }
+
+            .greetings {
+              font-size: 80pt;
+              color: blue;
+              font-weight: bold;
+              text-shadow: #cad5e2 1px 1px 0, #cad5e2 2px 2px 0, 
+                            #cad5e2 3px 3px 0, #cad5e2 4px 4px 0, 
+                            #cad5e2 5px 5px 0;
+            }
+
+            .health{
+              color: red;
+            }
+            .mana{
+              color: blue;
+            }
+            .happines{
+              color: orange;
+            }
+            .fatigue{
+              color: rgba(117, 78, 36, 0.849);
+            }
+
+            .sadness{
+              color: black;
+            }
+            .money{
+              color: green;
+            }
+            button { 
+                    border: 3px solid #4A90E2;
+                    transition: all 300ms ease;
+                    box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.2);
+            }
+
+            button:before {
+                    position: absolute;
+                    content: '';
+                    width: 0%;
+                    height: 100%;
+                    background: #4A90E2;
+                    top: 0;
+                    left: 50%;
+                    z-index: -1;
+                    transition: all 0ms ease;
+            }
+            button:hover {
+                color: white;
+                box-shadow: none;
+            }
